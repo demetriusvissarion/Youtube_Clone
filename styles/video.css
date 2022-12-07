@@ -7,7 +7,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .video-info-grid {
@@ -16,12 +16,13 @@
 }
 
 .profile-picture {
-  width: 40px;
+  width: 36px;
   border-radius: 50px;
 }
 
 .thumbnail-row {
-  margin-bottom: 12px;
+  margin-bottom: px;
+  position: relative;
 }
 
 .video-author,
@@ -39,4 +40,89 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 16px;
   row-gap: 40px;
+}
+
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.video-time {
+  font-family: Roboto, Arial;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+  border-radius: 2px;
+  color: white;
+  background-color: black;
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+}
+
+/* relative parent */
+.channel-picture {
+  display: inline-block;
+  position: relative;
+}
+
+/* absolute child */
+.channel_tooltip_absolute {
+  font-family: Roboto, Arial;
+  position: absolute;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px 3px grey;
+}
+
+.channel-picture:hover .channel_tooltip_absolute {
+  opacity: 1;
+}
+
+.channel_tooltip_icon {
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip_profile_picture {
+  width: 45px;
+  border-radius: 50px;
+}
+
+.channel_tooltip_text {
+  padding-left: 10px;
+}
+
+.channel_tooltip_title {
+  color: black;
+  background-color: white;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.channel_tooltip_subscribers {
+  color: grey;
 }
