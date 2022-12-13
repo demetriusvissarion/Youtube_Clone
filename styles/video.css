@@ -10,6 +10,26 @@
   margin-bottom: 10px;
 }
 
+.video-info a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.video-info a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.video-info a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.video-info a:active {
+  text-decoration: none;
+  color: black;
+}
+
 .video-info-grid {
   display: grid;
   grid-template-columns: 50px 1fr;
